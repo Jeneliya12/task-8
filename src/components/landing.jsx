@@ -1,54 +1,64 @@
-import React from "react";
-import "../style/global.css";
-
 function Landing() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="card w-100 bg-blue-100 shadow-lg rounded-lg p-6 flex flex-col items-center">
-        <figure className="mb-6">
-          <img
-            src="https://tse2.mm.bing.net/th?id=OIP.jryuUgIHWL-1FVD2ww8oWgHaHa&pid=Api&P=0&h=180"
-            alt="Profile"
-            className="rounded-full w-30 h-50 object-cover border-4 border-primary"
-          />
-        </figure>
-        <div className="card-body flex flex-col items-center text-center">
-          <h2 className="card-title text-2xl font-bold mb-2 fade-in-up">
-            Jeneliya Gurung
-          </h2>
-          <p className="text-gray-600 mb-4 fade-in-up">
-            Web Developer with a passion for building beautiful and functional
-            web applications. Web Developer with a passion for building
-            beautiful and functional web applications. Web Developer with a
-            passion for building beautiful and functional web applications. Web
-            Developer with a passion for building beautiful and functional web
-            applications. Web Developer with a passion for building beautiful
-            and functional web applications. Web Developer with a passion for
-            building beautiful and functional web applications.
+    <div className="min-h-screen flex flex-col justify-center pd-10">
+      {/* Hero Section */}
+      <section className="hero text-black py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif animate__animated animate__fadeIn animate__delay-1s">
+            Welcome to Our Service
+          </h1>
+          <p className="text-lg md:text-xl mb-6 font-serif">
+            We provide top-notch solutions to help you achieve your goals.
           </p>
-          <div className="card-actions flex justify-center space-x-4">
-            <a href="#follow-message" className="btn btn-primary">
-              Follow
-            </a>
-            <a href="#message" className="btn btn-outline">
-              Message
-            </a>
-          </div>
+          <a href="#contact" className="btn btn-secondary">
+            Get Started
+          </a>
+        </div>
+      </section>
 
-          <div
-            id="follow-message"
-            className="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-md shadow-md target:block"
-          >
-            <p className="fade-in-up">Thank you for following!</p>
-          </div>
-          <div
-            id="message"
-            className="hidden mt-4 p-4 bg-gray-200 text-gray-800 rounded-md shadow-md target:block"
-          >
-            <p className="fade-in-up">This is your message!</p>
+      {/* Features Section */}
+      <section className="features py-4">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-pink-300 feature-card shadow-lg rounded-lg p-6 text-center">
+              <h3 className="text-xl font-semibold mb-4">Feature One</h3>
+              <p className="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <div className="bg-pink-300 feature-card shadow-lg rounded-lg p-6 text-center">
+              <h3 className="text-xl font-semibold mb-4">Feature Two</h3>
+              <p className="text-gray-600">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+            </div>
+            <div className="bg-pink-300 feature-card shadow-lg rounded-lg p-6 text-center">
+              <h3 className="text-xl font-semibold mb-4">Feature Three</h3>
+              <p className="text-gray-600">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Call-to-Action Section */}
+      <section id="contact" className="cta bg-pink-300 text-white py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg md:text-xl mb-6">
+            Contact us today to learn more about how we can help you.
+          </p>
+          <a href="mailto:info@example.com" className="btn btn-secondary">
+            Contact Us
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
