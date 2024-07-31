@@ -1,13 +1,23 @@
-import Header from "../components/header.jsx";
-import Main from "../components/main.jsx";
-import Footer from "../components/footer.jsx";
+import React from "react";
+import Header from "../components/header";
+import MainSection from "../components/mainsection";
+import Footer from "../components/footer";
 
 function Home() {
   return (
-    <div className="bg-gray-200 min-h-screen p-4">
-      <Header age={26} bio="I am Jenny" />
-      <Main />
-      <Footer name="Jeneliya Gurung" year={2024} />
+    <div className="min-h-screen flex flex-col">
+      {/* Header Section */}
+      <Header />
+
+      {/* Main Content Section */}
+      <main className="flex-1 shadow-lg p-8">
+        <div className="container mx-auto px-4">
+          <MainSection />
+        </div>
+      </main>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
