@@ -1,7 +1,7 @@
 function Main() {
   return (
     <div>
-      <p>This is the Main Section</p>
+      <h2 className="text-2xl font-semibold">Main Content</h2>
     </div>
   );
 }
